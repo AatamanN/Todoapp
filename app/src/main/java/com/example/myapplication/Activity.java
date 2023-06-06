@@ -201,7 +201,8 @@ public class Activity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange (String Text) {
-
+                if (Text.equals("")) Update();
+                else Search(Text);
 
 
 
