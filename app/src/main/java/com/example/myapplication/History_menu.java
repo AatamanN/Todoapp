@@ -21,7 +21,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 
 public class History_menu extends AppCompatActivity {
-    RecyclerView task;
+    RecyclerView taskDel;
 
     static ArrayList<TaskModel> dataList = new ArrayList<>();
 
@@ -33,12 +33,12 @@ public class History_menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history_menu);
-        task = findViewById(R.id.taskList);
+        taskDel = findViewById(R.id.taskList);
         taskAdapter = new TaskAdapter(dataList);
         dataList.clear();
         RecyclerView.LayoutManager lManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        task.setLayoutManager(lManager);
-        task.setAdapter(taskAdapter);
+        taskDel.setLayoutManager(lManager);
+        taskDel.setAdapter(taskAdapter);
         db = FirebaseFirestore.getInstance();
         db.collection("deleted")
                 .whereEqualTo("userId", FirebaseAuth.getInstance().getUid())
