@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity"
+    android:orientation="horizontal"
+    android:background="@color/white2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="8">
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome back,"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="username"
+                    android:layout_marginLeft="12dp"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:id="@+id/userName"
+                    />
+        </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign Out"
+                android:id="@+id/btnSignOut"
+                android:layout_gravity="center"
+                />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/Profile"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:src="@drawable/profile_default"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+        <SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:queryHint="Search"
+            android:iconifiedByDefault="false"
+            android:layout_marginTop="10dp"
+            android:id="@+id/searchview"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/taskList"
+            />
+    </LinearLayout>
+
+
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:layout_alignParentBottom="true"
+    >
+
+    <ImageView
+        android:id="@+id/newTask"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:padding="30dp"
+        android:layout_weight="1"
+        android:background="@drawable/add"
+        />
+    <LinearLayout
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        ></LinearLayout>
+
+    <ImageView
+        android:id="@+id/editing"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:background="@drawable/editicon"
+
+        />
+    <LinearLayout
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        ></LinearLayout>
+
+        <ImageView
+            android:id="@+id/historyBtn"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:padding="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/history"
+
+            />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
